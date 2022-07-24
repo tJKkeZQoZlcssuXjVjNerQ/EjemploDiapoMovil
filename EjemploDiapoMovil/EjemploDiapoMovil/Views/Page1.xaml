@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="EjemploDiapoMovil.Views.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtContenido" Margin="10" Placeholder="Ingrese Contenido" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Frame CornerRadius="20" BackgroundColor="LawnGreen" HasShadow="True" Padding="0" Margin="10" xct:TouchEffect.NativeAnimation="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <Button x:Name="btnadd" Text="AGREGAR AL BLOQUE" BackgroundColor="Transparent" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+            </Frame>
+            <Editor x:Name="respuesta" FontSize="12" Margin="10" AutoSize="TextChanges" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="WhiteSmoke"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

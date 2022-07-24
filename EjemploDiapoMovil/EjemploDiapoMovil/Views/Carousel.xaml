@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemploDiapoMovil.Views.Carousel"
+             BackgroundColor="#5FC1FC">
+    <Grid VerticalOptions="CenterAndExpand" RowDefinitions="350,Auto">
+        <CarouselView Margin="0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}" IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  HorizontalOptions="FillAndExpand">
+                        <Image Source="{Binding UserImage}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView  Grid.Row="1" Margin="0,0,0,20" VerticalOptions="EndAndExpand"   x:Name="indicatorView"  
+                    IndicatorColor="Gray"
+                    SelectedIndicatorColor="#A32E9A"
+                    HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
