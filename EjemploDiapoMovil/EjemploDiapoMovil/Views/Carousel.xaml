@@ -4,15 +4,18 @@
              x:Class="EjemploDiapoMovil.Views.Carousel"
              BackgroundColor="#5FC1FC">
     <Grid VerticalOptions="CenterAndExpand" RowDefinitions="350,Auto">
+        <!--llenar el observable con el UserCollection y ponerle indicador de imagenes-->
         <CarouselView Margin="0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}" IndicatorView="indicatorView">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Grid  HorizontalOptions="FillAndExpand">
+                        <!--contenido de observable--> 
                         <Image Source="{Binding UserImage}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" />
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
+        <!--indicador en la parte de abajo de carrouselView-->
         <IndicatorView  Grid.Row="1" Margin="0,0,0,20" VerticalOptions="EndAndExpand"   x:Name="indicatorView"  
                     IndicatorColor="Gray"
                     SelectedIndicatorColor="#A32E9A"

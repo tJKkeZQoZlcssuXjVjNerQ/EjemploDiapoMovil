@@ -25,11 +25,6 @@ namespace EjemploDiapoMovil.Blockchain
             _BlockChain.AddLast(NewBlock);
         }
 
-        /// <summary>
-        /// Find block by string hash
-        /// </summary>
-        /// <param name="HashR"></param>
-        /// <returns></returns>
         public Block FindBlock(string HashR)
         {
             //Search Through The Entire Block
@@ -45,11 +40,6 @@ namespace EjemploDiapoMovil.Blockchain
             return null;
         }
 
-        /// <summary>
-        /// Find block by binary hash
-        /// </summary>
-        /// <param name="HashR"></param>
-        /// <returns></returns>
         public Block FindBlock(byte[] Hash)
         {
             //Search Through The Entire Block
@@ -75,11 +65,8 @@ namespace EjemploDiapoMovil.Blockchain
         /// <returns></returns>
         public bool VerifyBlock(Block BlockUnderTest, Block PreviousBlock, Block NextBlock)
         {
-
             return BlockchainLowLevel.VerifyBlock(BlockUnderTest, PreviousBlock, NextBlock);
         }
-
-  
         /// <summary>
         /// This is just for the video demo and acts as a pass-though to Low-level
         /// </summary>
@@ -90,8 +77,6 @@ namespace EjemploDiapoMovil.Blockchain
         public byte[] CreateASimpleBlockHash(byte[] PreviousBlockHash, string TransactionData, int Nonce)
         {
             return BlockchainLowLevel.HashBlock(PreviousBlockHash,TransactionData,Nonce);
-
-
         }
 
     }

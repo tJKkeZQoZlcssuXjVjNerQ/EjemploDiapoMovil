@@ -21,7 +21,6 @@ namespace EjemploDiapoMovil.Blockchain
 
             return GenesisBlock;
         }
-
         public static byte[] HashBlock(byte[] PreviousBlockHash, string BlockData, int Nonce)
         {
             string PreviousHashString = BitConverter.ToString(PreviousBlockHash);
@@ -38,9 +37,7 @@ namespace EjemploDiapoMovil.Blockchain
 
         public static bool VerifyBlock(Block BlockUnderTest, Block PreviousBlock, Block NextBlock)
         {
-
             byte[] CalculatedHashOfBlockUnderTest = null;
-
             //if the Previous is Null, we are at the genesis block, 
             //so create a new one and comapre
             if (PreviousBlock == null)
@@ -51,22 +48,16 @@ namespace EjemploDiapoMovil.Blockchain
                 else
                     return false;
             }
-            
             // if the nextblock is null, we need to make sure the previous block matches the block to verify
             if (NextBlock == null) 
             {
-
                 CalculatedHashOfBlockUnderTest = HashBlock(PreviousBlock.BlockHash, BlockUnderTest.Data, BlockUnderTest.Nonce);
-
                 if (CalculatedHashOfBlockUnderTest.SequenceEqual(BlockUnderTest.BlockHash))
                     return true;
                 else
                     return false;
-
             }
-
             //If we're in the middle of the block.
-
             //Hash the block under test
             CalculatedHashOfBlockUnderTest = HashBlock(PreviousBlock.BlockHash, BlockUnderTest.Data, BlockUnderTest.Nonce);
 

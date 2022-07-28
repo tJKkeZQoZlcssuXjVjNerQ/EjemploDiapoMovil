@@ -11,12 +11,12 @@ namespace EjemploDiapoMovil.Views
 {
     public partial class Carousel : ContentPage
     {
-
         public class UserInformation
         {
             public ImageSource UserImage { get; set; }
 
         }
+        //observable collection para ser usado como listado
         private ObservableCollection<UserInformation> userCollection;
         public ObservableCollection<UserInformation> UserCollection
         {
@@ -33,6 +33,7 @@ namespace EjemploDiapoMovil.Views
         {
             InitializeComponent();
             BindingContext = this;
+            //lenar el observable con imagenes
             UserCollection = new ObservableCollection<UserInformation>
             {
                 new UserInformation{UserImage = "pic1.jpg"},

@@ -12,7 +12,7 @@
                 </Frame.GestureRecognizers>
                 <Button x:Name="btnadd" Text="AGREGAR AL BLOQUE" BackgroundColor="Transparent" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
             </Frame>
-            <Editor x:Name="respuesta" FontSize="12" Margin="10" AutoSize="TextChanges" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="WhiteSmoke"/>
+            <Editor x:Name="respuesta" FontSize="15" Margin="10" AutoSize="TextChanges" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="WhiteSmoke"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

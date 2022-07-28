@@ -11,7 +11,6 @@ namespace EjemploDiapoMovil.Blockchain
         private byte[] _PreviousBlockHash;
         private string _Data;
         private int _nonce;
-
         public byte[] BlockHash { get { return _BlockHash; } }
         public string HashR { get { return BitConverter.ToString(_BlockHash); } }
 
